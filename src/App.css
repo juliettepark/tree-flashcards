@@ -1,0 +1,112 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background-image: url('sage.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+/* .wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.container {
+  color: rgb(0, 74, 0);
+  background-color:floralwhite;
+  width: 50%;
+  /* height: 50vh; */
+  margin: auto;
+  margin-top: 10vh;
+  border-radius: 40px;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+.flashcard-container {
+  border: 2px solid rgb(0, 74, 0);
+  margin: 5%;
+  height: 30vh;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 56, 0);
+}
+
+.flashcard-container:hover {
+  cursor: pointer;
+}
+
+.flashcard-container > h2 {
+  margin: 2%;
+}
+
+.credits {
+  display: block;
+  color: black;
+  margin-top: 2%;
+}
+
+.nextButton {
+  border-radius: 10px;
+  padding: 5px 10px;
+  color:rgb(0, 74, 0);
+  background-color: floralwhite;
+  border: 2px solid rgb(0, 74, 0);
+}
+
+.nextButton:hover {
+  cursor: pointer;
+}
