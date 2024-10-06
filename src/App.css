@@ -105,6 +105,17 @@ body {
   color:rgb(0, 74, 0);
   background-color: floralwhite;
   border: 2px solid rgb(0, 74, 0);
+  margin: 5px;
+  font-size:medium;
+}
+
+.answerBox {
+  margin: 5px;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 74, 0);
+  height: 20px;
+  padding: 5px;
+  font-size:medium;
 }
 
 .nextButton:hover {

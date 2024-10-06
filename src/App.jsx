@@ -15,29 +15,42 @@ function App() {
       answer: "Arboretum"
     },
     {
-      question: "What are the two main categories of trees?",
+      question: "What are the two main categories of trees? Please enter as \"D________ and C_________\"",
       answer: "Deciduous and Coniferous"
     },
     {
-      question: "What makes a tree deciduous?",
-      answer: "Deciduous trees (also known as broadleaf) have large and wide leaves." 
+      question: "_________ trees (also known as broadleaf) have large and wide leaves." 
       + " This allows for the tree to take in more sunlight for photosynthesis, but with a tradeoff that the leaves are often fragile."
-      + " Deciduous trees often drop their leaves in the autumn 🍂."
+      + " _________ trees often drop their leaves in the autumn 🍂.",
+      answer: "Deciduous"
     },
     {
-      question: "What makes a tree coniferous?",
-      answer: "Coniferous trees retain their leaves throughout the year and only shed old leaves. They produce cones (which are its flowers)."
-      + " Some well known coniferous trees are pines, spruces, firs, and hemlocks."
+      question: "__________ trees retain their leaves throughout the year and only shed old leaves. They produce cones (which are its flowers)."
+      + " Some well known __________ trees are pines, spruces, firs, and hemlocks.",
+      answer: "Coniferous"
     },{
-      question: "What is the oldest known tree species?",
-      answer: "Great Basin bristlecone pine. They can live for over 5000 years!"
+      question: "What is the oldest known tree species that can live for over 5000 years?",
+      answer: "Great Basin Bristlecone Pine"
     }
   ]
 
   const [currCard, setCurrCard] = useState(0);
+  const [answer, setAnswer] = useState('');
+  const [result, setResult] = useState('');
 
-  const handleNext = () => {
-    setCurrCard(generateNext());
+  const handleNext = (increment) => {
+    
+    if (currCard + increment == allCards.length) {
+      setCurrCard(1);
+    } else if (currCard + increment < 1) {
+      setCurrCard(allCards.length - 1);
+    } else if (increment == 23) {
+      setCurrCard(generateNext());
+    } else {
+      setCurrCard(currCard + increment);
+    }
+    setAnswer('');
+    setResult('Enter your answer: ');
   }
 
   const generateNext = () => {
@@ -47,16 +60,32 @@ function App() {
     return result;
   }
 
+  const handleAnswer = (e) => {
+    const inputted = e.target.value;
+    console.log(inputted);
+    setAnswer(inputted);
+  }
+
+  const handleCheckAnswer = () => {
+    // Verify if inputted answer is the same as recorded answer
+    if (answer == allCards[currCard].answer) {
+      setResult('Correct!');
+    } else {
+      setResult('Try again');
+    }
+  }
+
   return (
     <>
       <div className='container'>
         <h1>Leafy Learning</h1>
         <h2>Test your tree knowledge with this tree trivia!</h2>
         <h3>Total cards: {allCards.length}</h3>
-        <Flashcard question={allCards[currCard].question} answer={allCards[currCard].answer}/> 
-        <button className='nextButton' onClick={handleNext}>
-          <FaArrowAltCircleRight size={25}/>
-        </button>
+        <Flashcard question={allCards[currCard].question} answer={allCards[currCard].answer} handleNext={handleNext}/> 
+        <br/>
+        <h3>{result}</h3>
+        <input type='text' onChange={handleAnswer} value={answer} className='answerBox'/>
+        <button className='nextButton' onClick={handleCheckAnswer}>Check Answer</button>
         <a className='credits' href='https://www.nwf.org/Trees-for-Wildlife/About/Trees-101'>Information Source </a> 
       </div>
     </> 
