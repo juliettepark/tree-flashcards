@@ -1,4 +1,4 @@
-# Web Development Project 2 - *Leafy Learning - Tree Trivia 🌲*
+# Web Development Project 3 - *Leafy Learning - Tree Trivia 🌲*
 
 Submitted by: **Juliette Park**
 
@@ -10,29 +10,34 @@ Time spent: **5** hours spent in total
 
 The following **required** functionality is completed:
 
-- [X] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [X] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [X] **A list of card pairs is created**
-- [X] **Clicking on the card shows the corresponding component of the information pair**
-- [X] **Clicking the next button displays a random new card**
+- [X] **The user can enter their guess in a box before seeing the flipside of the card**
+- [X] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [X] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [X] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [ ] Cards contains images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
-- [ ] *visual style implemented*
+- [X] A shuffle button is used to randomize the order of the cards
+- [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [ ] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
-* [X] Spent a lot of time experimenting with the styling to get a simple but inviting UI!
+* [X] External links to learn even more about trees!
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here is a walkthrough of the Week 3 Upgrades:
+![](https://github.com/juliettepark/tree-flashcards/blob/main/project3_flashcards_input.gif)
+<!-- 
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> -->
+
+Here is a walkthrough of the Week 2 Original Format:
 ![](https://github.com/juliettepark/tree-flashcards/blob/main/project2_flashcards.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with LiceCap 
+GIF created with LiceCap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -40,8 +45,8 @@ GIF created with LiceCap
 
 ## Notes
 
-I struggled with unflipping the card when the "next" button was pressed and tried to use things like useState,
-adding a callback from the parent component and so on. I plan to ask more about this in OH or lecture.
+I ran into some git merge conflicts when trying to add new features on top
+of the old and learned a bit about rebasing + different options for merging (fast-forward, etc.)
 
 ## License
 
